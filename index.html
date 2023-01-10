@@ -36,9 +36,14 @@
         let hambur = document.querySelector('.hamburger');
         let nav = document.querySelector('.nav_items')
         let nav_item = document.querySelectorAll('.nav_item')
-        function ham(){nav.classList.toggle('slide_ham'); nav_item.forEach(element=>{
-            element.classList.toggle('nav_item_active');
-        })}
+        function ham(){
+            nav.classList.toggle('slide_ham'); 
+            nav_item.forEach((element, i) => {
+                setTimeout(() => {
+                    element.classList.toggle('nav_item_active');
+                }, i * 200)                
+            })
+            };
     </script>
 
 </body>
