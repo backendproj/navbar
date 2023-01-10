@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- Navbar -->
+        <nav>
+            <div class="hamburger" onclick="ham()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <div class="logo">
+                <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png" alt="Logo of twitter" class="logo_img"></a>
+            </div>
+
+            <ul class="nav_items">
+                <li class="nav_item"><a href="">home</a></li>
+                <li class="nav_item"><a href="">features</a></li>
+                <li class="nav_item"><a href="">services</a></li>
+                <li class="nav_item"><a href="">contact</a></li>
+            </ul>
+        </nav>
+        <!-- /Navbar -->
+    </div>
+
+    <script>
+        let hambur = document.querySelector('.hamburger');
+        let nav = document.querySelector('.nav_items')
+        let nav_item = document.querySelectorAll('.nav_item')
+        function ham(){nav.classList.toggle('slide_ham'); nav_item.forEach(element=>{
+            element.classList.toggle('nav_item_active');
+        })}
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+nav {
+    width: 80%;
+    margin: 5px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #39b0d8;
+    border-radius: 6px;
+}
+
+/* Hamburger Tayyor */
+.hamburger {
+    height: 65px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 10px;
+}
+
+.line {
+    width: 35px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+/* Logo Tayyor */
+.logo_img {
+    width: 50px;
+    margin-left: 30px;
+}
+
+/* Nav Linklar */
+.nav_items {
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    transition: all 0.5s ease;
+}
+
+.nav_item {
+    transition: all 0.5s ease;
+    transition-delay: 1s;
+}
+
+.nav_item > a {
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+/* Planshet */
+@media screen and (max-width: 1024px) {
+    .nav_items {
+        width: 90%;
+    }
+}
+
+/* Telefon */
+@media screen and (max-width: 768px) {
+    nav {
+        margin: 0;
+        width: 50%;
+        flex-direction: column;
+        text-align: center;
+        height: 100vh;
+        background-color: transparent;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: flex;
+        border: 3px solid black;
+        border-radius: 12px;
+        padding: 10px;
+        background-color: orange;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav_items {
+        flex-direction: column;
+        height: 100%;
+        background-color: #39b0d8;
+        transform: translate(-500px);   
+    }
+
+    .nav_item{ 
+        transform: translate(-500px);
+    }
+
+    .nav_item_active {
+        transform: translate(0px);
+    }
+
+    .slide_ham {
+        transform: translate(0);
+    }
+}
