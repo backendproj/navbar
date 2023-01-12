@@ -6,47 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/eb63f600ab.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <div class="container">
+
         <!-- Navbar -->
         <nav>
-            <div class="hamburger" onclick="ham()">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+            <!-- Nav Logo -->
+            <div class="logo_bar">
+                <a href="index.html" class="logo">
+                    <img src="https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png" alt="" class="logo_img">
+                    <span class="logo_title">CodingLab</span>
+                </a>
+                <i class="fa-solid fa-bars-staggered"></i>
             </div>
+            <!--  Nav Logo -->
 
-            <div class="logo">
-                <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png" alt="Logo of twitter" class="logo_img"></a>
-            </div>
-
+            <!-- Nav_items -->
             <ul class="nav_items">
-                <li class="nav_item"><a href="">home</a></li>
-                <li class="nav_item"><a href="">features</a></li>
-                <li class="nav_item"><a href="">services</a></li>
-                <li class="nav_item"><a href="">contact</a></li>
+                <li class="nav_item"><i class="nav_icon fa-regular fa-magnifying-glass"></i><input type="text" placeholder="Search..."></li>
+                <li class="nav_item"><i class="nav_icon fa-regular fa-grid-2"></i><a href="">dashboard</a></li>
+                <li class="nav_item"><i class="nav_icon fa-regular fa-user"></i><a href="">user</a></li>
+                <li class="nav_item"><i class="nav_icon fa-regular fa-messages"></i><a href="">message</a></li>
+                <li class="nav_item"><i class="nav_icon fa-regular fa-chart-pie"></i><a href="">analytics</a></li>
+                <li class="nav_item"><i class="nav_icon fa-regular fa-folder"></i><a href="">file manager</a></li>
+                <li class="nav_item"><i class="nav_icon fa-regular fa-cart-shopping"></i><a href="">order</a></li>
+                <li class="nav_item"><i class="nav_icon fa-regular fa-heart"></i><a href="">saved</a></li>
+                <li class="nav_item"><i class="nav_icon fa-regular fa-gear"></i><a href="">settings</a></li>
             </ul>
+            <!-- /Nav_items -->
+
+            <!-- Bar footer -->
+            <div class="bar_info">
+                <div class="user_info">
+                    <img src="./IMG_5864.jpg" alt="" class="user_img">
+                    <h3 class="user_name">Otabek Nurmatov</h3>
+                    <span class="user_pos">Software Engineer</span>
+                </div>
+                <div class="log_out">
+                    <a href="#"><i class="fa-regular fa-right-from-bracket"></i></a>
+                </div>
+            </div>
+            <!-- /Bar footer -->
+
         </nav>
         <!-- /Navbar -->
+
     </div>
 
-    <script>
-        let hambur = document.querySelector('.hamburger');
-        let nav = document.querySelector('.nav_items')
-        let nav_item = document.querySelectorAll('.nav_item')
-        let line = document.querySelectorAll('.line')
-        function ham(){
-            nav.classList.toggle('slide_ham');
-            nav_item.forEach((element, i) => {
-                element.classList.toggle('nav_item_active');
-            })
-            line.forEach((lin) => {
-                lin.classList.toggle('line_active');
-            })
-            };
-    </script>
 
 </body>
 </html>
